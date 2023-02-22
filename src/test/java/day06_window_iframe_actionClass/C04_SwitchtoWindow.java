@@ -28,7 +28,6 @@ public class C04_SwitchtoWindow extends TestBase {
         //  Click Here butonuna basın.
         driver.findElement(By.linkText("Click Here")).click();
 
-        //  Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
 
         /*
             Eger switchtoNewWindow() methodu kullanilirsa
@@ -45,7 +44,7 @@ public class C04_SwitchtoWindow extends TestBase {
             bunlardan bir tanesi windowHandle degerini kaydettigimiz ilk sayfa
             digeri ise window handle degerini bilmedigimiz ikinci sayfa
 
-            biz getWindowHandles()methoduile
+            biz getWindowHandles()methodu ile
             bir SET olarak iki sayfanin windowHandle degerlerini alabiliyoruz
 
             O set icerisinde
@@ -65,6 +64,7 @@ public class C04_SwitchtoWindow extends TestBase {
             }
 
         }
+        //  Acilan yeni pencerenin sayfa başlığının (title) “New Window” oldugunu dogrulayin.
         driver.switchTo().window(ikincisayfaWHD);
         expectedTitle = "New Window";
         actualTitle = driver.getTitle();
@@ -76,6 +76,7 @@ public class C04_SwitchtoWindow extends TestBase {
         expectedYazi = "New Window";
         Assert.assertEquals(expectedYazi, ikinciSayfaYazi);
         //  Bir önceki pencereye geri döndükten sonra sayfa başlığının “The Internet” olduğunu doğrulayın.
+        driver.switchTo().window(ilkSayfaWHD);
         expectedTitle = "The Internet";
         actualTitle= driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);

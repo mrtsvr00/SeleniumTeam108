@@ -10,9 +10,9 @@ public class C02_Iframe extends TestBase {
 
     @Test
     public void test01(){
-        //
+        // https://the-internet.herokuapp.com/iframe sayfasina gidin
         driver.get("https://the-internet.herokuapp.com/iframe");
-        //
+        // "Your content goes here." yazisnin gorunur oldugunu test edin
         /*
         Bazen locate islemimizden emin olmamiza ragmen
         Locator calismaz
