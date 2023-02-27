@@ -20,7 +20,7 @@ public class C04_FilePath {
         //   /Users/ahmetbulutluoz/IdeaProjects/seleniumTeam108/src/test/java/day07_actionsClass_fileTestleri/text.txt
         // C:\Users\Zafer\Desktop\gitHubTeam108\com.wisequarter1\src\test\java\day07_fileTests\text
         // C:\Users\sevil\IdeaProjects\seleniumTeam108\src\test\java\day07_actionClass_fileTest\text.txt
-        String dosyaYolu = "C:\\Users\\murat\\OneDrive\\Masaüstü\\TheDelta.docx";
+        String dosyaYolu = "C:/Users/murat/OneDrive/Masaüstü/TheDelta.docx";
         System.out.println(dosyaYolu);
         boolean sonuc = Files.exists(Paths.get(dosyaYolu));
         /*
@@ -32,8 +32,8 @@ public class C04_FilePath {
             java'dan bir komut ile elde edebiliriz
          */
         System.out.println(System.getProperty("user.home"));
-        dosyaYolu = "C:\\Users\\murat\\OneDrive\\Masaüstü\\TheDelta.docx";
-        dosyaYolu = System.getProperty("user.home") + "OneDrive\\Masaüstü\\TheDelta.docx";
+        dosyaYolu = "C:/Users/murat/OneDrive/Masaüstü/TheDelta.docx";
+        dosyaYolu = System.getProperty("user.home") + "Masaüstü/TheDelta.docx";
         System.out.println(System.getProperty("user.dir"));
     }
 }
